@@ -1,5 +1,5 @@
 body {
-  background-image: url(background.jpg);
+  background-image: url(./assets/background.jpg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +8,8 @@ body {
 .App {
   margin-top: 20vh;
   font-family: monospace;
-  color: rgb(214, 142, 142);
+  font-size: 0.85rem;
+  color: rgb(175, 103, 103);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -19,11 +20,18 @@ input {
   margin: 10px;
   background-color: rgb(255, 231, 231);
   text-align: center;
+  height: 3vh;
   color: rgb(82, 77, 77);
 }
 
+.password{
+  display:flex;
+  align-items: center;
+}
+
 #password {
-  width: 100px;
+  width: 10vw;
+  max-width: 200px;
   border-radius: 5px;
 }
 
@@ -40,11 +48,21 @@ input {
 }
 
 button {
-  text-align: center;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 3.5vh;
   padding: 5px;
   border-radius: 5px;
   background-color: rgb(255, 231, 231);
-  box-shadow: 5px 5px;
+  box-shadow: 2px 2px;
+  position: relative;
+  transition: all 0.01s ease-in-out;
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
 }
 
 #length-num {
